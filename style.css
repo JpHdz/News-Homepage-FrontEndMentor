@@ -1,0 +1,238 @@
+/*
+- Colors:
+--Background-Color: #F3EDE5
+--BtnSign-In-Color: #133416
+--Text-Color:#B4B3AF #6C6B69
+--Title-Secondary: #F6B300
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 / 120
+
+
+-Font weights
+Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
+
+- Line heights
+Default: 1
+Small: 1.05
+Medium: 1.2
+Paragraph default: 1.6
+Large: 1.8
+
+- Letter spacing
+-0.5px
+0.75px
+*/
+
+/* =========== General Styles ===========*/
+@font-face {
+  font-family: "Inter";
+  src: url(/assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-Bold";
+  src: url(/assets/fonts/static/Inter-Bold.ttf);
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Inter-Bolder";
+  src: url(/assets/fonts/static/Inter-ExtraBold.ttf);
+  font-weight: bolder;
+  font-style: normal;
+}
+.attribution {
+  font-size: 1.1rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+body {
+  overflow-x: hidden;
+  background-color: #f3ede5;
+}
+.container {
+  max-width: 120rem;
+  padding: 7.4rem 3.2rem;
+
+  margin: 0 auto;
+}
+
+/* =========== Header ===========*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4.8rem;
+}
+.header img {
+  width: 4.8rem;
+}
+.main-nav ul {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.6rem;
+  list-style: none;
+}
+.nav-list-items a {
+  font-size: 1.6rem;
+  color: #6c6b69;
+  text-decoration: none;
+  /* font-family: "Inter-Bold"; */
+  transition: all 1s;
+}
+.nav-list-items a:hover,
+.nav-list-items a:active {
+  color: hsl(35, 77%, 62%);
+  /* border-bottom: 1px solid #353434; */
+}
+
+/* =========== Main Content ===========*/
+.main-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 3fr 2fr;
+  margin-bottom: 4.8rem;
+  column-gap: 3.2rem;
+  row-gap: 4.2rem;
+}
+.mobile-img {
+  display: none;
+}
+
+.img-main-container {
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.img-main-container img {
+  width: 100%;
+}
+.h1-container {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  height: auto;
+}
+.h1-container h1 {
+  font-size: 5rem;
+  font-family: "Inter-Bolder";
+}
+.description-content-container {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  height: auto;
+}
+.description-content-container p {
+  color: #6c6b69;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+.cta-btn {
+  padding: 1.4rem 3.6rem;
+  background-color: #f35c4f;
+  transition: all 1s;
+  width: 18rem;
+  text-align: center;
+}
+.cta-btn:hover {
+  background-color: #be453a;
+}
+.cta-btn a {
+  font-size: 1.6rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+.main-aside {
+  grid-column: 3/4;
+  grid-row: 1/-1;
+  background-color: black;
+  padding: 2.8rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-self: start;
+  /* gap: 3.6rem; */
+}
+.main-aside h2 {
+  color: #eaaf59;
+  font-size: 3.2rem;
+}
+.aside-box {
+  border-bottom: 1px solid #fff;
+  margin-top: 2.4rem;
+}
+.aside-box:last-child {
+  border: none;
+}
+
+.aside-box h5 {
+  color: #fff;
+  font-size: 2.2rem;
+  font-family: "Inter-Bold";
+  margin-bottom: 1.4rem;
+}
+.aside-box p {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 2.4rem;
+  line-height: 1.6;
+}
+/* =========== Footer ===========*/
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2.4rem;
+}
+.footer-box {
+  display: flex;
+  gap: 2rem;
+}
+.footer-box img {
+  width: 100%;
+}
+.box-content-container .number {
+  font-family: "Inter-Bold";
+  font-size: 3.2rem;
+
+  color: #b4b3af;
+}
+.box-content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.box-content-container h4 {
+  color: black;
+  font-family: "Inter-Bold";
+  font-size: 2.4rem;
+}
+.box-content-container p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+.btn-menu {
+  display: none;
+}
